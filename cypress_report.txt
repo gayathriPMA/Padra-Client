@@ -1,0 +1,56 @@
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.12.0                                                                        │
+  │ Browser:        Electron 118 (headless)                                                        │
+  │ Node Version:   v14.0.0 (C:\Users\91701\.nvm\versions\node\v14.0.0\bin\node.exe)               │
+  │ Specs:          1 found (clientlogin.cy.js)                                                    │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  clientlogin.cy.js                                                               (1 of 1)
+
+Your configFile threw an error from: cypress.config.js
+
+We stopped running your tests because your config file crashed.
+
+Error [ERR_UNSUPPORTED_ESM_URL_SCHEME]: Only file and data URLs are supported by the default ESM loader
+    at Loader.defaultResolve [as _resolve] (internal/modules/esm/resolve.js:666:11)
+    at Loader.resolve (internal/modules/esm/loader.js:97:40)
+    at Loader.getModuleJob (internal/modules/esm/loader.js:243:28)
+    at ModuleWrap.<anonymous> (internal/modules/esm/module_job.js:42:40)
+    at link (internal/modules/esm/module_job.js:41:36)
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        0                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     0 seconds                                                                        │
+  │ Spec Ran:     clientlogin.cy.js                                                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  clientlogin.cy.js                          0ms        -        -        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                       0ms        -        -        1        -        -  
+
