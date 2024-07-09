@@ -3,7 +3,7 @@ describe('Login as a Patient', () => {
         const validEmail = 'esakki@mypadra.com';
         const invalidEmail = 'esakki';
         /* Visit application */
-        cy.visit('https://dev-app.padraclinic.ca/login')
+        cy.visit('/')
 
         /* Enter valid email address */
         cy.get('.p-inputtext').type(validEmail)
@@ -32,9 +32,9 @@ describe('Login as a Patient', () => {
         cy.get('.auth_email_validation__Zx_Wi').should('contain', 'Please enter a valid Email Address');
 
 
-
-        // cy.get('.p-inputtext').clear().type(invalidEmail);
-        // cy.get('button[aria-label="Request OTP"]').should('be.disabled');
+/* 'Request OTP' button diabled */
+        cy.get('.p-inputtext').clear().type(invalidEmail);
+        cy.get('button[aria-label="Request OTP"]').should('be.disabled');
 
         cy.get('.p-inputtext').clear().type(validEmail);
         cy.get('button[aria-label="Request OTP"]').should('be.enabled');
@@ -45,9 +45,9 @@ describe('Login as a Patient', () => {
         cy.get('button[aria-label="Request OTP"]').should('be.enabled');
 
         /* Check input with spaces */
-        // cy.get('.p-inputtext').clear().type('  esakki@mypadra.com  ');
-        // cy.get('.p-inputtext').should('have.value', 'esakki@mypadra.com');
-        // cy.get('button[aria-label="Request OTP"]').should('be.enabled');
+        cy.get('.p-inputtext').clear().type('  esakki@mypadra.com  ');
+        cy.get('.p-inputtext').should('have.value', 'esakki@mypadra.com');
+        cy.get('button[aria-label="Request OTP"]').should('be.enabled');
 
         /* invalid mail address */
         const invalidEmails = ['plainaddress', '@missingusername.com', 'username@.com'];
